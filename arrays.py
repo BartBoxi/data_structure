@@ -129,11 +129,43 @@
 #Deleting at an ith index
 #Remove value at index i before shifting elements to the left
 # Assuming i is a valid index
-def removeMiddle(arr, i, lenght):
-    #shift starting from i + 1 to end
-    for index in range(i + 1, lenght):
-        arr[index -1] = arr[index]
-        print(arr)
+# def removeMiddle(arr, i, lenght):
+#     #shift starting from i + 1 to end
+#     for index in range(i + 1, lenght):
+#         arr[index -1] = arr[index]
+#         print(arr)
+#
+# arr = [1,2,3,4,5]
+# removeMiddle(arr, 2, len(arr))
 
-arr = [1,2,3,4,5]
-removeMiddle(arr, 2, len(arr))
+# def insertEnd(arr, n, length, capacity):
+#     if length < capacity:
+#         arr[length] = n
+
+### length is the number of elements inside the array whereas capacity refers to
+### the maximum number of elements the array can hold
+
+### 26 Remove Duplicates from Sorted Array
+#Solution
+# class Solution:
+#     def removeDuplicates(self, nums: List[int]) -> int:
+#         l = 1
+#         for r in range(1, len(nums)):
+#             if nums[r] != nums[r - 1]:
+#                 nums[l] = nums[r]
+#                 l += 1
+#         return l
+#
+
+arr = [1,1,1,2,3,0,4,2]
+val = 1
+
+def count_occ(arr, val):
+    l = 0
+    for i in range(len(arr)):
+        if arr[i] == val:
+            l += 1
+    print(l)
+
+
+count_occ(arr, val)
