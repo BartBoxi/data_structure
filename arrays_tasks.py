@@ -41,8 +41,15 @@
 def removeEnd(arr, length):
     if length > 0:
         arr[length - 1] = 0
-        print(arr)
-
+        arr.pop() #pop is physically removing the latest element from the list
 arr = [1,2,3]
 length = len(arr)
-print(removeEnd(arr,length))
+removeEnd(arr,length)
+print(arr)
+
+## deleting at an ith index
+
+#remove value at i index before shifting elements to the left
+#assuming that i is a valid index!
+# def removeMiddle(arr, i, length):
+#     #shift starting from i + 1 to end
