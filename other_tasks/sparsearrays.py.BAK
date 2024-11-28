@@ -1,0 +1,17 @@
+import math
+import os
+import random
+import re
+import sys
+
+
+strings = ["ab", "abc", "bc"]
+
+queries = ["ab", "ab", "abc"]
+counter = 0
+for i in strings:
+    if j in queries:
+        if i == j:
+            counter +=1
+        else:
+            pass
