@@ -76,34 +76,68 @@ print(root_node)
 
 
 class TreeNode:
-	def __init__(self, val=0, children = None):
+	def __init__(self, val=0):
 		self.val = val
-		self.children = children if children is not None else []
+		self.left = None
+		self.right = None
 
-def preorder_dfs(node):
-	if not node:
-		return
-	print(node.val)
 
-	for child in node.children:
-		preorder_dfs(child)
-	return
+root = TreeNode(0)
+one = TreeNode(1)
+two = TreeNode(2)
 
-node0 = TreeNode(0)
-node1 = TreeNode(1)
-node2 = TreeNode(2)
-node3 = TreeNode(3)
-node4 = TreeNode(4)
-node5 = TreeNode(5)
-node6 = TreeNode(6)
+root.left = one
+root.right = two
 
-# Define relationships
-node0.children = [node1, node2]
-node1.children = [node3, node4]
-node2.children = [node5]
-node3.children = [] # Leaf node
-node4.children = [node6]
-node5.children = [] # Leaf node
-node6.children = [] # Leaf node
+print(root.left.val)
+print(root.right.val)
 
-preorder_dfs(node0)
+
+
+#
+# def preorder_dfs(node):
+# 	if not node:
+# 		return
+# 	print(node.val)
+#
+# 	for child in node.children:
+# 		preorder_dfs(child)
+# 	return
+#
+# def inorder_dfs(node):
+# 	if not node:
+# 		return
+#
+# 	if node.children:
+# 		inorder_dfs(node.children[0])
+#
+# 	print(node.val)
+#
+# 	if len(node.children) > 1:
+# 		for child in node.children[1:]:
+# 			inorder_dfs(child)
+# 	return
+#
+#
+#
+# node0 = TreeNode(0)
+# node1 = TreeNode(1)
+# node2 = TreeNode(2)
+# node3 = TreeNode(3)
+# node4 = TreeNode(4)
+# node5 = TreeNode(5)
+# node6 = TreeNode(6)
+#
+# # Define relationships
+# node0.children = [node1, node2]
+# node1.children = [node3, node4]
+# node2.children = [node5]
+# node3.children = [] # Leaf node
+# node4.children = [node6]
+# node5.children = [] # Leaf node
+# node6.children = [] # Leaf node
+#
+# #preorder_dfs(node0)
+# inorder_dfs(node0)
+#
+
