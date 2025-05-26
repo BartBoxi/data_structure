@@ -74,23 +74,23 @@ print(root_node)
 # 	preorder_dfs(node.right)
 # 	return
 
-
-class TreeNode:
-	def __init__(self, val=0):
-		self.val = val
-		self.left = None
-		self.right = None
-
-
-root = TreeNode(0)
-one = TreeNode(1)
-two = TreeNode(2)
-
-root.left = one
-root.right = two
-
-print(root.left.val)
-print(root.right.val)
+#
+# class TreeNode:
+# 	def __init__(self, val=0):
+# 		self.val = val
+# 		self.left = None
+# 		self.right = None
+#
+#
+# root = TreeNode(0)
+# one = TreeNode(1)
+# two = TreeNode(2)
+#
+# root.left = one
+# root.right = two
+#
+# print(root.left.val)
+# print(root.right.val)
 
 
 
@@ -139,5 +139,7 @@ print(root.right.val)
 #
 # #preorder_dfs(node0)
 # inorder_dfs(node0)
-#
+
+
+
 
