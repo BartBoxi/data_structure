@@ -18,3 +18,24 @@ if __name__ == '__main__':
             top_student = name
     print(top_student)
 
+### correct answer
+
+if __name__ == '__main__':
+    records = []
+    for _ in range(int(input())):
+        name = input()
+        score = float(input())
+        records.append([name, score])
+
+    unique_scores = sorted(set(score for _, score in records))
+    second_lowest = unique_scores[1]
+
+    names_with_second = sorted(name for name, score in records if score == second_lowest)
+
+    for name in names_with_second:
+        print(name)
+
+
+
+
+
