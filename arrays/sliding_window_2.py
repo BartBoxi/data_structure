@@ -10,7 +10,7 @@ def find_length(nums: list[int], k: int) -> int:
             curr -= nums[left]
             left += 1
 
-        ans = max(ans, right - left +1)
+        ans = max(ans, right - left +1)  ## remember to add +1 to include all elements
 
     return ans
 
