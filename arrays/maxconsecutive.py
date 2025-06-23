@@ -17,7 +17,9 @@ nums = [1,1,1,0,0,0,1,1,1,1,0]
 
 k = 2
 
+nums1 = [1,1,0,0,0,1]
 
-print(max_consecutive(nums, k))
+
+print(max_consecutive(nums1, k))
 
 
