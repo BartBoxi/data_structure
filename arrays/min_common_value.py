@@ -14,10 +14,6 @@ def min_value(nums1:list[int], nums2:list[int]):
             j +=1
     return min(common_element)
 
-
-
-
-
 ### testing part
 nums1 = [1,2,3]
 nums2 = [2,4]
