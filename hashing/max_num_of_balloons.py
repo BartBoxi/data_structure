@@ -12,8 +12,8 @@ def maxBalloon(text:str) -> int:
         if char in counts:
             counts[char] += 1
 
-    counts['l'] % 2
-    counts['o'] % 2
+    counts['l'] = counts['l'] // 2 ### dzielenie bez reszty
+    counts['o'] = counts['o'] // 2
 
     return min(counts.values())
 
@@ -21,7 +21,10 @@ def maxBalloon(text:str) -> int:
 
 
 
-print(maxBalloon("loonbalxballpoon"))
+print(maxBalloon("balon"))
+
+
+
 
 
 
