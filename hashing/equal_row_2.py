@@ -32,3 +32,5 @@ def equalPairs(grid:List[List[int]])-> int:
 
 
 
+
+
