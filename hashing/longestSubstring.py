@@ -14,7 +14,7 @@ def lengthOfLongestSubstring(s: str) -> int:
                 left += 1
         hashset.add(s[right])
         current_length = (right  - left + 1)
-        max_length = max(current_length, max_length )
+        max_length = max(current_length, max_length)
 
     return max_length
 
