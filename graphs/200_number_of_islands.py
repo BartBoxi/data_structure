@@ -7,7 +7,33 @@ def numIslands(grid:List[List[str]]) -> int:
 
     def dfs(row,col):
         for dx, dy in directions:
-            next_row, next_col = row + dy, col + dy
+            next_row, next_col = row + dy, col + dx
+            if valid(next_row, next_col) and (next_row, next_col) not in seen:
+                seen.add((next_row, next_col))
+                dfs(next_row, next_col)
 
+    directions = [(0,1), (1,0), (0,-1),(-1,0)]
+    seen = set()
+    ans = 0
 
-### TODO: Finish the rest of the code from Leetcode and analyze it
+    m = len(grid)
+    n = len(grid[0])
+
+    for row in range(m):
+        for col in range(n):
+            if grid[row][col] == "1" and (row,col) not in seen:
+                ans += 1
+                seen.add((row, col))
+                dfs(row, col)
+
+    return ans
+
+grid = [
+  ["1","1","1","1","0"],
+  ["1","1","0","1","0"],
+  ["1","1","0","0","0"],
+  ["0","0","0","0","0"]
+]
+
+print(numIslands(grid))
+
