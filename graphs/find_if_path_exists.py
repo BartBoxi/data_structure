@@ -1,12 +1,12 @@
-import collections
 from typing import List
 
-from collections import deque, defaultdict
+from collections import deque
+from collections import defaultdict
 
 ### BFS Solution
 class Solution():
     def findifthepathexists(self, n:int, edges:List[List[int]], source:int, destination:int):
-        graph = collections.defaultdict(list)
+        graph = defaultdict(list)
         for a,b in edges:
             graph[a].append(b)
             graph[b].append(a)
@@ -14,7 +14,7 @@ class Solution():
         # storing all the nodes to be visited in the queue
         seen = [False] * n
         seen[source] = True
-        queue = collections.deque([source])
+        queue = deque([source])
         print(seen)
         print(seen[source])
 
