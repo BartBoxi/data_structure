@@ -1,5 +1,5 @@
-
-from typing import Optional
+from typing import Optional, List
+from collections import deque
 
 class TreeNode:
     def __init__(self, val=0, left=None, right=None):
@@ -7,6 +7,12 @@ class TreeNode:
         self.left = left
         self.right = right
 
+# --- The TreeNode Class ---
+class TreeNode:
+    def __init__(self, val=0, left=None, right=None):
+        self.val = val
+        self.left = left
+        self.right = right
 
 def hasPathSum(self, root: Optional[TreeNode], targetSum: int) -> bool:
     def dfs(node: Optional[TreeNode], current_sum: int) -> bool: 
