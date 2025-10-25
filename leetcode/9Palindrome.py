@@ -2,7 +2,7 @@
 
 
 def isPalindrome(x:int) -> bool:
-    if x > 0:
+    if x >= 0:
         rev_num = int(str(x)[::-1])
         if x == rev_num:
             return True
@@ -12,5 +12,8 @@ def isPalindrome(x:int) -> bool:
         return False
     
     
-x = 121
+x = 0
 print(isPalindrome(x))
+
+################################
+
