@@ -1,0 +1,15 @@
+def nextGreaterElement(nums1: list[int], nums2: list[int]) -> list[int]:
+    res = [0] * len(nums1)
+    stack = []
+
+    for i in range(len(nums1)):
+        if nums2[i] < nums1[i]:
+            nums2.pop()
+        else:
+            stack.append(nums2[i])
+    return stack
+
+nums1 = [2,4]
+nums2 = [1,2,3,4]
+
+print(nextGreaterElement(nums1, nums2))
